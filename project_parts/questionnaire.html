@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета користувача</title>
+</head>
+<body>
+
+<h1>Анкета користувача</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Особисті дані</legend>
+
+        <label for="name">Ім'я та прізвище:</label><br>
+        <input type="text" id="name" name="name" value=""
+               placeholder="Введіть ім'я" required tabindex="1"><br><br>
+
+        <label for="nickname">Нікнейм:</label><br>
+        <input type="text" id="nickname" name="nickname" value=""
+               placeholder="Введіть нікнейм" tabindex="2"><br><br>
+
+        <label for="about">Розкажіть про себе:</label><br>
+        <textarea id="about" name="about"
+                  placeholder="Коротка інформація про вас"
+                  tabindex="3"></textarea><br><br>
+
+        <label for="birth">Дата народження:</label><br>
+        <input type="date" id="birth" name="birth"
+               value="2000-01-01" required tabindex="4">
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Контактна інформація</legend>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value=""
+               placeholder="example@gmail.com"
+               autocomplete="off"
+               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+               required tabindex="5"><br><br>
+
+        <label for="phone">Мобільний телефон:</label><br>
+        <input type="tel" id="phone" name="phone" value=""
+               placeholder="+380501234567"
+               pattern="\+380[0-9]{9}"
+               required tabindex="6"><br><br>
+
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"
+               value="" placeholder="6 символів: Abc123"
+               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6}"
+               title="Рівно 6 символів, велика і мала літера та цифра"
+               required tabindex="7">
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Вподобання</legend>
+
+        <p>1. Який формат навчання вам подобається?</p>
+
+        <input type="radio" name="study" value="online" tabindex="8">
+        <label>Онлайн</label><br>
+
+        <input type="radio" name="study" value="offline" tabindex="9">
+        <label>Офлайн</label><br>
+
+        <input type="radio" name="study" value="mixed" tabindex="10">
+        <label>Змішаний</label><br>
+
+        <p>2. Яким пристроєм користуєтесь?</p>
+
+        <input type="radio" name="device" value="computer" tabindex="11">
+        <label>Комп'ютер</label><br>
+
+        <input type="radio" name="device" value="laptop"
+               checked tabindex="12">
+        <label>Ноутбук</label><br>
+
+        <input type="radio" name="device" value="phone" tabindex="13">
+        <label>Телефон</label><br>
+
+        <p>Ваші інтереси:</p>
+
+        <input type="checkbox" name="interests" value="music" tabindex="14">
+        <label>Музика</label><br>
+
+        <input type="checkbox" name="interests" value="sport" tabindex="15">
+        <label>Спорт</label><br>
+
+        <input type="checkbox" name="interests" value="games" tabindex="16">
+        <label>Ігри</label><br>
+
+        <input type="checkbox" name="interests" value="travel" tabindex="17">
+        <label>Подорожі</label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Додаткова інформація</legend>
+
+        <label for="region">Оберіть область:</label><br>
+
+        <select id="region" name="region" tabindex="18">
+            <option value="kyiv">Київська</option>
+            <option value="lviv">Львівська</option>
+            <option value="chernivtsi" selected>Чернівецька</option>
+            <option value="odesa">Одеська</option>
+            <option value="kharkiv">Харківська</option>
+        </select><br><br>
+
+        <label for="languages">Якими мовами володієте?</label><br>
+
+        <select id="languages" name="languages" multiple size="6"
+                tabindex="19">
+            <option value="uk">Українська</option>
+            <option value="en">Англійська</option>
+            <option value="de">Німецька</option>
+            <option value="pl">Польська</option>
+            <option value="fr">Французька</option>
+            <option value="es">Іспанська</option>
+        </select><br><br>
+
+        <label for="category">Оберіть категорію:</label><br>
+
+        <select id="category" name="category" tabindex="20">
+
+            <optgroup label="Освіта">
+                <option value="school">Школа</option>
+                <option value="college">Коледж</option>
+                <option value="university">Університет</option>
+            </optgroup>
+
+            <optgroup label="Робота">
+                <option value="office">Офіс</option>
+                <option value="remote">Віддалено</option>
+                <option value="freelance">Фриланс</option>
+            </optgroup>
+
+            <optgroup label="Дозвілля">
+                <option value="reading">Читання</option>
+                <option value="gaming">Ігри</option>
+                <option value="sports">Спорт</option>
+            </optgroup>
+
+            <optgroup label="Інше">
+                <option value="volunteer">Волонтерство</option>
+                <option value="creative">Творчість</option>
+                <option value="other">Інше</option>
+            </optgroup>
+
+        </select><br><br>
+
+        <label for="city">Ваше місто:</label><br>
+
+        <input list="cities" id="city" name="city" value=""
+               placeholder="Введіть місто" tabindex="21">
+
+        <datalist id="cities">
+            <option value="Київ">
+            <option value="Львів">
+            <option value="Чернівці">
+            <option value="Одеса">
+            <option value="Харків">
+        </datalist><br><br>
+
+        <label for="audio">Завантажте аудіофайли:</label><br>
+
+        <input type="file" id="audio" name="audio"
+               value="" accept="audio/*" multiple tabindex="22">
+
+    </fieldset>
+
+    <br>
+
+    <button type="submit" tabindex="23">Надіслати</button>
+    <button type="reset" tabindex="24">Очистити</button>
+
+</form>
+
+</body>
+</html>
